@@ -1,0 +1,25 @@
+
+<div class="bg text-center">
+    <div class="centered">
+        <!--"Titular"-->
+        <p class="firstLine my-3 text-white">
+            I &nbsp; N &nbsp;
+            <span class="color"> H &nbsp; O &nbsp; U &nbsp; S &nbsp; E &nbsp; .</span>
+        </p>
+
+        <p class="secondLine my-3 text-white">Disfruta la nueva forma de ver contenido</p>
+
+        <!--"Formulario"-->
+        <form [formGroup]="formLogin" (ngSubmit)="submit()">
+            <p>
+                <input class="InputStyle my-3" placeholder="Usuario" style="font-family: Arial, FontAwesome" type="text"
+                    formControlName="user" />
+            </p>
+            <p>
+                <input class="InputStyle my-3" placeholder="Contraseña" style="font-family: Arial, FontAwesome"
+                    type="password" formControlName="password" />
+            </p>
+            <button class="btn btn-danger">Comenzar</button>
+        </form>
+    </div>
+</div>

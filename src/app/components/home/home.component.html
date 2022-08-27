@@ -1,0 +1,66 @@
+<div class="all">
+    <div class="header">
+        <!--"Banner"-->
+        <div class="header__banner" [ngStyle]="{
+        'background-image' : 'linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.3)), url('+headerBGUrl+')'
+        }">
+            <h2>{{trending?.results[0].title}}</h2>
+            <div class="header__buttons">
+
+                <button class="play-button">
+                    <mat-icon>arrow_right</mat-icon>
+                    <span>Ver ahora</span>
+                </button>
+
+                <button class="more-button">
+                    <mat-icon>info</mat-icon>
+                    <span>Descripción</span>
+                </button>
+
+            </div>
+
+
+        </div>
+
+        <!--"Header main"-->
+        <div class="header__main" id="stickyHeader" [class.sticky]="sticky" #stickHeader>
+            <div class="header__left">
+                <a routerLink="/">
+                    <img src="../assets/img/Inhome Logo - Original - 5000x5000.png" style="height: 30px; width: 60px; margin-top: -15px;"
+                        alt="logo">
+                </a>
+                <ul>
+                    <li class="active"><a href="#">Inicio</a></li>
+                    <li><a href="#">Top Peliculas</a></li>
+                    <li><a href="#">Top Series</a></li>
+                    <li><a href="#">Top Actores</a></li>
+                </ul>
+            </div>
+
+            <div class="header__right">
+                <ul>
+                    <li><a href="#">
+                            <mat-icon>search</mat-icon>
+                        </a></li>
+                    <li><a href="#">Historial</a></li>
+                    <li><a href="#">
+                            <mat-icon>notifications</mat-icon>
+                        </a></li>
+                    <li>
+                        <img src="https://mdbcdn.b-cdn.net/img/new/avatars/2.webp" class="rounded-circle" style="width: 30px;"alt="Avatar" />
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+
+    <!--"Contenidos por categorias"-->
+    <div class="body" style="margin-top: 30rem;">
+        <app-content-category title="Tendencias" [movies]="trending" [sliderConfig]="sliderConfig" ></app-content-category>
+        <app-content-category title="Peliculas originales" [movies]="originals" [sliderConfig]="sliderConfig"></app-content-category>
+    </div>
+
+
+
+</div>
